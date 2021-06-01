@@ -17,6 +17,12 @@ var roleBuilder = {
         if (creep.build(targets) == ERR_NOT_IN_RANGE) {
           creep.moveTo(targets, {visualizePathStyle : {stroke : '#2828FF'}});
         }
+      } else {
+        if (creep.pos.isEqualTo(5, 9)) {
+          creep.drop(RESOURCE_ENERGY);
+        } else {
+          creep.moveTo(5, 9);
+        }
       }
 
     } else {
